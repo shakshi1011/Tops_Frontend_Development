@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Inter;
+        }
+        .container{
+            width: 80vw;
+            margin: 0 auto;
+        }
+        .section-1{
+            padding-top: 50px;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style-type: none ;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-list ul{
+            display: flex;
+            gap: 50px;
+        }
+        .nav-log-in-sec{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .nav-log{
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .nav-btn{
+            width: 169px;
+            height: 48px;
+            border-radius: 4px;
+            background-color: #ECE5FF;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            color: #794CFF;
+            border: none;
+        }
+        select{
+            border: none;
+        }
+        .logo a{
+            font-family: Josefin Sans;
+            font-size: 24px;
+            font-weight: 400;
+            color: #1D2830;
+        }
+        .nav-list ul li a{
+            font-size: 16px;
+            font-weight: 400;
+            color: #1D2830;
+        }
+        /*-----------section-2----------- */
+        .sec-2{
+            padding: 100px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+        .ninty-percent{
+            width: 108px;
+            height: 32px;
+            border-radius: 100px;
+            background-color: #81C43B;
+            font-size: 16px;
+            font-weight: 500;
+            color: #ffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            left: 60px;
+        }
+        .sec-2-get-acc{
+            width: 209px;
+            height: 32px;
+            border-radius: 0px 100px 100px 0px;
+            background-color: #F2F9EB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 55px;
+        }
+        .sec-2-save{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sec-2-head{
+            width: 760px;
+            height: 144px;
+            font-size: 64px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .sec-2-para{
+            width: 505px;
+            height: 48px;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .sec-2-search-bar input{
+            width: 319px;
+            height: 52px;
+            border-radius: 4px 0 0 4px;
+            border: 1px solid #E1E5EA
+        }
+        .sec-2-search-bar input::placeholder{
+            font-size: 16px;
+            font-weight: 400;
+            padding-left: 25px;
+        }
+        .sec-2-search-bar button{
+            width: 164px;
+            height: 52px;
+            border-radius: 0px 4px 4px 0px;
+            background-color: #794CFF;
+            border: 1px solid #794CFF;
+            color: #F2F9EB;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .sec-2-search-bar{
+            display: flex;
+        }
+        .sec-2-graph-img{
+            width: 920px;
+            height: 654.29px;
+            background-image: url(../images/Graph\ 2\ 1.png);
+            box-shadow: 0px 0px 48px -8px #1D28302E;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .sec-2-brand-para{
+            width: 397px;
+            height: 16px;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .sec-2-brand-para span{
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .brand-img .list-item-1{
+            width: 80px;
+            height: 26.11px;
+            background-image: url(../images/google-2015a\ 1.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .brand-img .list-item-2{
+            width: 80px;
+            height: 24.96px;
+            padding: 0px 0.01px 0px 0.01px;
+            background-image: url(../images/airbnb\ 1.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .brand-img .list-item-3{
+            width: 77.17px;
+            height: 15.82px;
+            background-image: url(../images/Group.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .brand-img .list-item-4{
+            width: 80px;
+            height: 23.3px;
+            background-image: url(../images/hubspot\ 1.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .brand-img .list-item-5{
+            width: 80px;
+            height: 20.24px; 
+            background-image: url(./Images/5-slack.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .brand-img{
+            width: 80vw;
+        }
+        .brand-img ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        .section-3{
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 0;
+        }
+        .sec-3-img{
+            width: 657px;
+            height: 518px;
+            background-image: url(../images/Group\ 25\ 1.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .f-container-head{
+            font-size: 18px;
+            font-weight: 600;
+            text-align: left;
+            line-height: 18px;
+        }
+        .sec-3-first-container{
+            width: 372px;
+            height: 128px;
+            border-radius: 0px 8px 8px 0px;
+            border: 1px 0px 0px 0px;
+            border: 1px solid #F6F3FC;
+            background-color: #F6F3FC;
+            border-left: 10px solid #794CFF;
+            padding: 30px;
+        }
+        .f-container-para{
+            width: 308px;
+            height: 48px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+        .sec-3-second-container{
+            width: 372px;
+            height: 128px;
+            padding: 36px;
+            border-bottom: 2px solid #F6F3FC;
+        }
+        .section-4{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding: 100px 0;
+        }
+        .sec-4-head{
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 40px;
+            text-align: center;
+        }
+        .icon{
+            width: 64px;
+            height: 64px;
+        }
+        .f-icon{
+            background-image: url(../images/figma/Group\ 19.svg);
+        }
+        .s-icon{
+            background-image: url(../images/figma/Group\ 20.svg);
+        }
+        .t-icon{
+            background-image: url(../images/figma/Group\ 21.svg);
+        }
+        .forth-icon{
+            background-image: url(../images/figma/Group\ 22.svg);
+        }
+        .fifth-icon{
+            background-image: url(../images/figma/Group\ 23.svg);
+        }
+        .sixth-icon{
+            background-image: url(../images/figma/Group\ 24.svg);
+        }
+        .f-con-head{
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 18px;
+        }
+        .f-con-para{
+            width: 306px;
+            height: 48px;
+            opacity: 0px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+        .section-4-f-container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .three-items{
+            display: flex;
+            justify-content: space-between;
+        }
+        .sec-4-items{
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+        }
+        .section-5{
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 0;
+        }
+        .sec-5-head{
+            width: 341px;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 48px;
+            color: #35414B;
+        }
+        .sec-5-para{
+            width: 413px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+        .sec-5-btn{
+            width: 164px;
+            height: 52px;
+            border-radius: 4px;
+            background-color: #796EFF;
+            color: #FFFFFF;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 16px;
+            text-align: center;
+        }
+        .sec-5-content{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .sec-5-img{
+            width: 596.39px;
+            height: 404.68px;
+            background-image: url(../images/figma/Group\ 26.svg);
+        }
+        .section-6{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            padding: 100px 0;
+        }
+        .sec-6-head{
+            width: 394px;
+            height: 96px;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 48px;
+            text-align: center;
+        }
+        .sec-6-para{
+            width: 543px;
+            height: 96px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: center;
+        }
+        .sec-6-icon{
+            width: 48px;
+            height: 48px;
+        }
+        .f-p-icon{
+            background-image: url(../images/figma/Ellipse\ 5.svg);
+        }
+        .s-p-icon{
+            background-image: url(../images/figma/Ellipse\ 6.svg);
+        }
+        .t-p-icon{
+            background-image: url(../images/figma/Ellipse\ 7.svg);
+        }
+        .person-name{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 16px;
+        }
+        .person-info{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px;
+        }
+        .f-person{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 25px;
+            border-top: 4px solid #35414B;
+        }
+        .s-person{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 25px;
+        }
+        .sec-6-people{
+            width: 80vw;
+            display: flex;
+            justify-content: space-around;
+        }
+        .sec-6-download{
+            width: 80vw;
+            height: 224px;
+            border-radius: 16px;
+            background-color: #796EFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+        .down-content{
+            width: 423px;
+            height: 96px;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 48px;
+            color: #ffff;
+        }
+        .g-play-btn{
+            width: 180px;
+            height: 53.35px;
+            background-image: url(../images/figma/google-play-badge\ 1.svg);
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .app-store-btn{
+            width: 180px;
+            height: 53.35px;
+            background-image: url(../images/figma/Group.svg);
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .down-btn{
+            display: flex;
+            gap: 30px;
+        }
+        .section-7{
+            height: auto;
+            width: auto;
+            background-color: #1D2830;
+            padding: 50px 0;
+        }
+        .cont-list ul{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .cont-list .cont-head a{
+            font-weight: 600;
+        }
+        .cont-list ul li a{
+            font-size: 16px;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+        .sec-7-lists{
+            display: flex;
+            justify-content: space-between;
+        }
+        .sec-7-btn{
+            width: 162px;
+            height: 48px;
+            border: none;
+            border-radius: 6px;
+        }
+        .sec-7-play-btn{
+            background-image: url(../images/figma/Layer\ 2.svg);
+        }
+        .sec-7-app-store-btn{
+            background-image: url(../images/figma/black.svg);
+            border-radius: 8.5px;
+        }
+        .section-8{
+            background-color: #1D2830;
+            border-top: 1.5px solid #3d3d3d;
+            padding: 25px 0;
+        }
+        .icons{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(68, 68, 68);
+        }
+        .sec-8-icon ul{
+            display: flex;
+            gap: 25px;
+        }
+        .footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 14px;
+            color: #D9DBE1;
+        }
+
+        @media only screen and (max-width:600px) {
+            .nav-list,.nav-log-in-sec{
+                display: none;
+            }
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="section-1">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"><a href="">team.flow</a></div>
+                <div class="nav-list">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <select name="" id="">
+                                    <option value="" selected>How its works</option>
+                                </select>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <select name="" id="">
+                                    <option value="" selected>Product</option>
+                                </select>
+                            </a>
+                        </li>
+                        <li><a href="">Pricing</a></li>
+                        <li>
+                            <a href="">
+                                <select name="" id="">
+                                    <option value="" selected>Resources</option>
+                                </select>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-log-in-sec">
+                    <div class="nav-log">log in</div>
+                    <button class="nav-btn">Get strated free</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-2">
+        <div class="container">
+            <div class="sec-2">
+                <div class="sec-2-save">
+                    <div class="ninty-percent">save 90%</div>
+                    <div class="sec-2-get-acc">Get account of $59</div>
+                </div>
+                <div class="sec-2-head">Manage the team everyone wants to be on</div>
+                <div class="sec-2-para">Simple platform that lets you master what great managers do best,as develop
+                    trust, collaborate, and drive team performance.</div>
+                <div class="sec-2-search-bar">
+                    <input type="text" name="" id="" placeholder="name@yourcompnay.com">
+                    <button class="try-it-btn">Try it free</button>
+                </div>
+                <div class="sec-2-graph-img"></div>
+                <div class="sec-2-brand-para">TRUSTED BY OVER <span>10.000+</span> WORLD’S BEST TEAMS</div>
+                <div class="brand-img">
+                    <ul>
+                        <li class="list-item-1"></li>
+                        <li class="list-item-2"></li>
+                        <li class="list-item-3"></li>
+                        <li class="list-item-4"></li>
+                        <li class="list-item-5"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section-3">
+            <div class="sec-3-img"></div>
+            <div class="sec-3-content">
+                <div class="sec-3-first-container">
+                    <div class="f-container-head">Survey your team</div>
+                    <div class="f-container-para">Powerful questions that get to the heart of how team members really
+                        feel.</div>
+                </div>
+                <div class="sec-3-second-container">
+                    <div class="f-container-head">Resolve issues quickly</div>
+                    <div class="f-container-para">Anonymous messaging that connects managers and employees.</div>
+                </div>
+                <div class="sec-3-second-container">
+                    <div class="f-container-head">Plan your 1-on-1s</div>
+                    <div class="f-container-para">Plan meetings together and give a stake
+                        employees and teams.</div>
+                </div>
+                <div class="sec-3-second-container">
+                    <div class="f-container-head">Track your progress</div>
+                    <div class="f-container-para">Easy-to-read reports and sharable results help managers and teams.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section-4">
+            <div class="sec-4-head">Make your work easier</div>
+            <div class="sec-4-items">
+                <div class="three-items">
+                    <div class="section-4-f-container">
+                        <div class="f-icon icon"></div>
+                        <div class="f-container-content">
+                            <div class="f-con-head">Team Surveys & Reports</div>
+                            <div class="f-con-para">Short, anonymous surveys track your team’s needs weekly so you can
+                                focus.</div>
+                        </div>
+                    </div>
+                    <div class="section-4-f-container">
+                        <div class="s-icon icon"></div>
+                        <div class="f-container-content">
+                            <div class="f-con-head">Collaborative 1:1 </div>
+                            <div class="f-con-para">Build relationships by planning
+                                1-on-1s and start meetings.</div>
+                        </div>
+                    </div>
+                    <div class="section-4-f-container">
+                        <div class="t-icon icon"></div>
+                        <div class="f-container-content">
+                            <div class="f-con-head">Learning Center</div>
+                            <div class="f-con-para">Quickly get solutions tailored to your personal challenges from the
+                                manager.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="three-items">
+                    <div class="section-4-f-container">
+                        <div class="forth-icon icon"></div>
+                        <div class="f-container-content">
+                            <div class="f-con-head">Anonymous Messaging</div>
+                            <div class="f-con-para">Develop trust in a safe channel for important conversations.</div>
+                        </div>
+                    </div>
+                    <div class="section-4-f-container">
+                        <div class="fifth-icon icon"></div>
+                        <div class="f-container-content">
+                            <div class="f-con-head">Conversation Engines</div>
+                            <div class="f-con-para">Communicate confidently with
+                                recommended talking points.</div>
+                        </div>
+                    </div>
+                    <div class="section-4-f-container">
+                        <div class="sixth-icon icon"></div>
+                        <div class="f-container-content">
+                            <div class="f-con-head">Exclusives Manager</div>
+                            <div class="f-con-para">Access manager tips, activities and best practices from our team of
+                                experts.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------section-5-------------- -->
+    <div class="container">
+        <div class="section-5">
+            <div class="sec-5-content">
+                <div class="sec-5-head">We work how you work everyday</div>
+                <div class="sec-5-para">Since the easiest things to use actually get used, we adapts to the way your
+                    team works – not the other way around.</div>
+                <button class="sec-5-btn">Get started free</button>
+            </div>
+            <div class="sec-5-img"></div>
+        </div>
+    </div>
+    <!-- -------------------section-6--------- -->
+    <div class="container">
+        <div class="section-6">
+            <div class="sec-6-head">Why customers love working with us</div>
+            <div class="sec-6-para">“It's amazing what has helped me learn about my team. I don't worry about blindspots
+                anymore, and 1-on-1s have never been more productive. The team loves it.”</div>
+            <div class="sec-6-people">
+                <div class="f-person">
+                    <div class="f-p-icon sec-6-icon"></div>
+                    <div class="f-p-data">
+                        <p class="person-name">Jorge Robertson</p>
+                        <p class="person-info">CS at Google</p>
+                    </div>
+                </div>
+                <div class="s-person">
+                    <div class="s-p-icon sec-6-icon"></div>
+                    <div class="f-p-data">
+                        <p class="person-name">Jorge Robertson</p>
+                        <p class="person-info">CS at Google</p>
+                    </div>
+                </div>
+                <div class="s-person">
+                    <div class="t-p-icon sec-6-icon"></div>
+                    <div class="f-p-data">
+                        <p class="person-name">Jorge Robertson</p>
+                        <p class="person-info">CS at Google</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-6-download">
+                <div class="down-content">84% of employees who use trust their direct manager</div>
+                <div class="down-btn">
+                    <button class="g-play-btn"></button>
+                    <button class="app-store-btn"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------section-7--------- -->
+    <div class="section-7">
+        <div class="container">
+            <div class="sec-7-lists">
+                <div class="cont-list">
+                    <ul>
+                        <li class="cont-head"><a href="">Company</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="cont-list">
+                    <ul>
+                        <li class="cont-head"><a href="">Support</a></li>
+                        <li><a href="">Help Center</a></li>
+                        <li><a href="">Safety Center</a></li>
+                        <li><a href="">Community</a></li>
+                    </ul>
+                </div>
+                <div class="cont-list">
+                    <ul>
+                        <li class="cont-head"><a href="">Legal</a></li>
+                        <li><a href="">Cookies Policy</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="cont-list">
+                    <ul>
+                        <li class="cont-head"><a href="">Company</a></li>
+                        <li><button class="sec-7-play-btn sec-7-btn"></button></li>
+                        <li><button class="sec-7-app-store-btn sec-7-btn"></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-8">
+        <div class="container">
+            <div class="footer">
+                <div class="content">&copy; 2024 - All rights reseverved</div>
+                <div class="sec-8-icon">
+                    <ul>
+                        <li class="icons"><a href=""><i class="fa-brands fa-instagram fa-lg" style="color: #ffffff;"></i></a></li>
+                        <li class="icons"><a href=""><i class="fa-solid fa-globe fa-lg" style="color: #ffffff;"></i></a></li>
+                        <li class="icons"><a href=""><i class="fa-brands fa-twitter fa-lg" style="color: #ffffff;"></i></a></li>
+                        <li class="icons"><a href=""><i class="fa-brands fa-youtube fa-lg" style="color: #ffffff;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moon</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent{
+            height: 100vh;
+            width: 100vw;
+            background-color: orange;
+            background-image: linear-gradient(to  top,rgb(68, 68, 68),orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }  
+        .circle-1{
+            height: 300px;
+            width: 300px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+        .circle-2{
+            height: 270px;
+            width: 270px;
+            border-radius: 50%;
+            background-color: orange;            
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="circle-1">
+            <div class="circle-2"></div>
+        </div>
+    </div>
+</body>
+</html>

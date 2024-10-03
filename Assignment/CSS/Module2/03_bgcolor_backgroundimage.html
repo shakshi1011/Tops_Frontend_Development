@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-bg_clolor_and_img_background</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .half-color-background{
+            width: 50vw;
+            height: 100vh;
+            background-color: black;
+            position: absolute;
+            z-index: -1;
+        }
+        .half-img-background img{
+            width: 50vw;
+            height: 100vh;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+        }
+        .container-2{
+            height: 100vh;
+            width: 52vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .services{
+            color: white;
+            border-right: 5px solid red;
+            padding-right: 30px;
+            text-align: right;
+            margin-right: 110px;
+        }
+        .common-head{
+            color: red;
+            text-align: right;
+        }
+        .para{
+            color: grey;
+            text-align: right;
+            font-size: 13px;
+        }
+        .three-section{
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+        .head-and-para{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .icon{
+            background-color: white;
+            height: 55px;
+            width: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .line-space{
+            line-height: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container-1">
+        <div class="half-color-background"></div>
+        <div class="half-img-background"><img src="../images/ipad.webp" alt=""></div>
+    </div>
+   <div class="container-2">
+        <div class="three-section">
+            <div class="services"><h1>OUR SERVICES</h1></div>
+            <div class="head-and-para">
+                <div class="line-space">
+                    <h2 class="common-head">WEB DESIGN</h2>
+                    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore obcaecati soluta, officia adipisci rerum illum doloremque harum ducimus aperiam id!</p>
+                </div> 
+                <div class="icon"><i class="fa-solid fa-display fa-lg" style="color: #ff0000;"></i></div>
+            </div>
+            <div class="head-and-para">
+                <div class="line-space">
+                    <h2 class="common-head">PRINT DESIGN</h2>
+                    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore obcaecati soluta, officia adipisci rerum illum doloremque harum ducimus aperiam id!</p>
+                </div> 
+                <div class="icon"><i class="fa-solid fa-layer-group fa-lg" style="color: #ff0000;"></i></div>
+            </div>
+            <div class="head-and-para">
+                <div class="line-space">
+                    <h2 class="common-head">PHOTOGRAPHY</h2>
+                    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore obcaecati soluta, officia adipisci rerum illum doloremque harum ducimus aperiam id!</p>
+                </div> 
+                <div class="icon"><i class="fa-solid fa-camera fa-lg" style="color: #ff0000;"></i></div>
+            </div>
+        </div>
+   </div>
+</body>
+</html>

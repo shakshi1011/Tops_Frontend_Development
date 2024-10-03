@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>waves</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 0vh;
+            width: auto;
+            
+        }
+        .waves svg{
+            position: relative;
+        }
+        .bg-img{
+            height: 100vh;
+            background-image: url(../images/mobile.jpg);
+            color: #ffff;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding-top: 100px;
+        }
+        .content-head{
+            font-weight: 900;
+            font-size: 2em;
+        }
+        .content-para{
+            font-size: 13px;
+        }
+        .f-border,.s-border{
+            width: 70px;
+            border-bottom: 2px solid #880808;
+        }
+        .border{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .circle{
+            height: 40px;
+            width: 40px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .c-1{
+            top:326px;
+            left: 300px;
+        }
+        .c-2{
+            top:325px;
+            left: 500px;
+        }
+        .c-3{
+            top:340px;
+            left: 700px;
+        }
+        .c-4{
+            top:365px;
+            left: 900px;
+        }
+        .c-5{
+            top:366px;
+            left: 1100px;
+        }
+        .circle:hover{
+            height: 50px;
+            width: 50px;
+        }
+        .c-1:hover + .d-block{
+            display: block;
+        }
+        .d-block{
+            position: absolute;
+            display: none;
+            top:380px;
+            left: 227px;
+        }
+        .web-para{
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #b40404;
+        }
+        .para{
+            font-size: 13px; 
+            text-align: center;
+        }
+        .b-para{
+            height: 50px;
+            border-left: 2px solid crimson;
+            margin-left: 95px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bg-img">
+            <div class="content">
+                <div class="content-head">OUR TEAM</div>
+                <div class="content-para"> Meet the craziest team. Share your thoughts with them.</div>
+                <div class="border">
+                    <div class="f-border"></div>
+                    <div class="star">*</div>
+                    <div class="s-border"></div>
+                </div>
+            </div>
+            <div class="waves">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#880808" fill-opacity="0.7" d="M0,192L60,181.3C120,171,240,149,360,144C480,139,600,149,720,165.3C840,181,960,203,1080,181.3C1200,160,1320,96,1380,64L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+            </div>
+            <div class="circle c-1"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></div>
+            <div class="circle c-2"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></div>
+            <div class="circle c-3"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></div>
+            <div class="circle c-4"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></div>
+            <div class="circle c-5"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></div>
+        </div>
+    </div>
+</body>
+</html>
