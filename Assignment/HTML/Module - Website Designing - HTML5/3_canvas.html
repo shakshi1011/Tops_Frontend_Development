@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Shapes with Gradient and Multicolor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f3f3;
+            padding-top: 50px;
+        }
+
+        canvas {
+            border: 2px solid #d6d6d6;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Canvas Shapes with Gradient and Multicolor</h1>
+    
+    <canvas id="myCanvas" width="600" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = '#FFA500';
+        ctx.fillRect(50, 50, 150, 100);
+
+        const gradient = ctx.createLinearGradient(250, 50, 400, 50);
+        gradient.addColorStop(0, 'orange');
+        gradient.addColorStop(1, 'red');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(250, 50, 150, 150);
+
+        const gradientCircle = ctx.createRadialGradient(450, 300, 10, 450, 300, 50);
+        gradientCircle.addColorStop(0, 'red');
+        gradientCircle.addColorStop(0.33, 'yellow');
+        gradientCircle.addColorStop(0.66, 'green');
+        gradientCircle.addColorStop(1, 'blue');
+        ctx.beginPath();
+        ctx.arc(450, 300, 50, 0, 2 * Math.PI);
+        ctx.fillStyle = gradientCircle;
+        ctx.fill();
+    </script>
+
+</body>
+</html>
