@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while Loop</title>
+</head>
+<body>
+    <script>
+// Task 2: Using a while loop to sum all even numbers between 1 and 20
+let sum = 0;
+let num = 1;
+
+while (num <= 20) {
+    if (num % 2 === 0) {  // Check if the number is even
+        sum += num;  // Add the even number to the sum
+    }
+    num++;  // Increment the number
+}
+
+document.write("The sum of all even numbers between 1 and 20 is: " + sum);
+    </script>
+</body>
+</html>

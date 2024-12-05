@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Initial paragraph -->
+    <p id="myParagraph">Hello, World!</p>
+
+    <script>
+        // Change the text inside the paragraph
+        document.getElementById("myParagraph").textContent = "JavaScript is fun!";
+
+        // Change the color of the paragraph
+        document.getElementById("myParagraph").style.color = "blue";
+    </script>
+
+</body>
+</html>

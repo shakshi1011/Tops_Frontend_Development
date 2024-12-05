@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division by Zero</title>
+</head>
+<body>
+    <h1>Division by Zero Example</h1>
+    <script>
+        function divideNumbers(a, b) {
+            try {
+                if (b === 0) {
+                    throw new Error("Division by zero is not allowed.");
+                }
+                const result = a / b;
+                console.log(`Result: ${result}`);
+            } catch (error) {
+                console.error("Error:", error.message);
+                alert(`Error: ${error.message}`);
+            } finally {
+                console.log("Division operation completed.");
+            }
+        }
+
+        // Example: Divide 10 by 0
+        divideNumbers(10, 0);
+    </script>
+</body>
+</html>

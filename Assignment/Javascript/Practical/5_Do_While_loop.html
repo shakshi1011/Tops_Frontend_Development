@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do while Loop</title>
+</head>
+<body>
+    <script>
+// Task 3: Using a do-while loop to ask the user for input until they enter a number greater than 10
+let number;
+
+do {
+    number = prompt("Enter a number greater than 10:");  // Prompt the user for input
+    number = Number(number);  // Convert input to a number
+} while (number <= 10);  // Continue asking if the number is 10 or less
+
+alert("You entered a valid number: " + number);  // Alert the valid number
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Flow (Switch case)</title>
+</head>
+<body>
+    <script>
+// Task 2: Display day of the week based on user input
+let dayNumber = prompt("Enter a number (1-7) to get the corresponding day of the week:");  // Taking user input
+dayNumber = Number(dayNumber);  // Convert the input to a number
+
+switch (dayNumber) {
+    case 1:
+        document.write("Monday<br>");
+        break;
+    case 2:
+        document.write("Tuesday<br>");
+        break;
+    case 3:
+        document.write("Wednesday<br>");
+        break;
+    case 4:
+        document.write("Thursday<br>");
+        break;
+    case 5:
+        document.write("Friday<br>");
+        break;
+    case 6:
+        document.write("Saturday<br>");
+        break;
+    case 7:
+        document.write("Sunday<br>");
+        break;
+    default:
+        document.write("Invalid day number. Please enter a number between 1 and 7.<br>");
+}
+
+    </script>
+</body>
+</html>
