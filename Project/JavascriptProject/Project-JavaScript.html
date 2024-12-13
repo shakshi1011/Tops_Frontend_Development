@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #dff3f8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 700px;
+            width: 100%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Heading */
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #F9869BFF;
+        }
+
+        /* Form Styles */
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        /* All input type */
+        input[type="text"], 
+        input[type="number"], 
+        input[type="email"], 
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Gender */
+        .gender-options {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        /* Button */
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 150px;
+            margin: 0 auto;
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        /* Table Styles */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .data-table th, .data-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .data-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .data-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .data-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Actions Button */
+        button {
+            padding: 5px 10px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        button:nth-child(1) {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        button:nth-child(2) {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Registration Form</h1>
+        <form method="post" action="#" name="frm" class="form">
+            <input type="hidden" name="id" id="id">
+            
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password" maxlength="6" required>
+
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" placeholder="Enter your age" required>
+
+            <label>Gender</label>
+            <div class="gender-options">
+                <input type="radio" name="gender" id="gender1" value="Male">
+                <label for="gender1">Male</label>
+                <input type="radio" name="gender" id="gender2" value="Female">
+                <label for="gender2">Female</label>
+            </div>
+
+            <input type="button" value="Save" class="btn save" onclick="saveData()">
+        </form>
+
+        <br>
+        <h2>User Data</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="alldata"></tbody>
+        </table>
+    </div>
+    <script src="Project-JavaScript.js"></script>
+</body>
+</html>
