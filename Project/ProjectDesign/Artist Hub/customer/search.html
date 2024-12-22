@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Artists - Artist Hiring Platform</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .search-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .artist-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .artist-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1>Artist Hiring Platform</h1>
+            <nav>
+                <a href="profile.html">My Profile</a>
+                <a href="search.html">Search Artists</a>
+                <a href="manage-bookings.html">My Bookings</a>
+                <a href="feedback.html">Give Feedback</a>
+                <a href="../index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Search Artists</h2>
+        
+        <form id="search-form">
+            <div class="form-group">
+                <label for="search">Search:</label>
+                <input type="text" id="search" name="search" placeholder="Enter artist name or keyword">
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="">All Categories</option>
+                    <option value="musician">Musician</option>
+                    <option value="painter">Painter</option>
+                    <option value="dancer">Dancer</option>
+                    <option value="comedian">Comedian</option>
+                    <option value="magician">Magician</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rating">Minimum Rating:</label>
+                <select id="rating" name="rating">
+                    <option value="">Any Rating</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars and up</option>
+                    <option value="3">3 Stars and up</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Search</button>
+        </form>
+
+        <div class="search-grid" id="search-results">
+            <div class="artist-card">
+                <img src="../images/account.png" alt="Shakshi shah">
+                <h3>Shakshi shah</h3>
+                <p>Category: Musician</p>
+                <p>Rating: 4.5/5</p>
+                <a href="book.html?artist=Shakshishah" class="btn">Book Now</a>
+            </div>
+            <div class="artist-card">
+                <img src="../images/account.png" alt="Hardip Rathod">
+                <h3>Hardip Rathod</h3>
+                <p>Category: Painter</p>
+                <p>Rating: 4.8/5</p>
+                <a href="book.html?artist=HardipRathod" class="btn">Book Now</a>
+            </div>
+            <div class="artist-card">
+                <img src="../images/account.png" alt="Keyur Patel">
+                <h3>Keyur Patel</h3>
+                <p>Category: Comedian</p>
+                <p>Rating: 4.2/5</p>
+                <a href="book.html?artist=KeyurPatel" class="btn">Book Now</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2023 Artist Hiring Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Search functionality to be implemented');
+        });
+    </script>
+</body>
+</html>
+

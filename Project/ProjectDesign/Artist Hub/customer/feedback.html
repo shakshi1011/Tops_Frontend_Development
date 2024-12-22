@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Feedback - Artist Hiring Platform</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .feedback-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .star-rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+        .star-rating input {
+            display: none;
+        }
+        .star-rating label {
+            cursor: pointer;
+            font-size: 30px;
+            color: #ccc;
+        }
+        .star-rating label:before {
+            content: '★';
+        }
+        .star-rating input:checked ~ label {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1>Artist Hiring Platform</h1>
+            <nav>
+                <a href="profile.html">My Profile</a>
+                <a href="search.html">Search Artists</a>
+                <a href="manage-bookings.html">My Bookings</a>
+                <a href="feedback.html">Give Feedback</a>
+                <a href="../index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Give Feedback or Review</h2>
+        
+        <form class="feedback-form">
+            <div class="form-group">
+                <label for="feedback-type">Feedback Type:</label>
+                <select id="feedback-type" name="feedback-type" required>
+                    <option value="">Select a type</option>
+                    <option value="artist-review">Artist Review</option>
+                    <option value="platform-feedback">Platform Feedback</option>
+                </select>
+            </div>
+            <div class="form-group" id="artist-selection" style="display: none;">
+                <label for="artist">Select Artist:</label>
+                <select id="artist" name="artist">
+                    <option value="">Select an artist</option>
+                    <option value="john-doe">Shakshi Shah</option>
+                    <option value="jane-smith">Keyur Patel</option>
+                    <option value="mike-brown">Hardip Rathod</option>
+                </select>
+            </div>
+            <div class="form-group" id="rating-group" style="display: none;">
+                <label>Rating:</label>
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5"></label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="feedback-subject">Subject:</label>
+                <input type="text" id="feedback-subject" name="feedback-subject" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback-message">Your Feedback:</label>
+                <textarea id="feedback-message" name="feedback-message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2023 Artist Hiring Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('feedback-type').addEventListener('change', function() {
+            const artistSelection = document.getElementById('artist-selection');
+            const ratingGroup = document.getElementById('rating-group');
+            if (this.value === 'artist-review') {
+                artistSelection.style.display = 'block';
+                ratingGroup.style.display = 'block';
+            } else {
+                artistSelection.style.display = 'none';
+                ratingGroup.style.display = 'none';
+            }
+        });
+
+        document.querySelector('.feedback-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Feedback submission functionality to be implemented');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+

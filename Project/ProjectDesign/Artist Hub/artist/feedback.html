@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Feedback - Artist Hiring Platform</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .feedback-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1>Artist Hiring Platform</h1>
+            <nav>
+                <a href="profile.html">My Profile</a>
+                <a href="feedback.html">Give Feedback</a>
+                <a href="../index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Give Feedback</h2>
+        
+        <form class="feedback-form">
+            <div class="form-group">
+                <label for="feedback-type">Feedback Type:</label>
+                <select id="feedback-type" name="feedback-type" required>
+                    <option value="">Select a type</option>
+                    <option value="general">General Feedback</option>
+                    <option value="booking">Booking Process</option>
+                    <option value="payment">Payment System</option>
+                    <option value="support">Customer Support</option>
+                    <option value="suggestion">Suggestion</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="feedback-subject">Subject:</label>
+                <input type="text" id="feedback-subject" name="feedback-subject" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback-message">Your Feedback:</label>
+                <textarea id="feedback-message" name="feedback-message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2023 Artist Hiring Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.feedback-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Feedback submission functionality to be implemented');
+            // Here you would typically send the feedback to the server
+            this.reset(); // Reset the form after submission
+        });
+    </script>
+</body>
+</html>
+

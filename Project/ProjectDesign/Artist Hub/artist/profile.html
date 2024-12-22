@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Profile - Artist Hiring Platform</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .profile-section {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .portfolio-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        .portfolio-item {
+            position: relative;
+        }
+        .portfolio-item img,
+        .portfolio-item video {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .portfolio-item button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1>Artist Hiring Platform</h1>
+            <nav>
+                <a href="profile.html">My Profile</a>
+                <a href="feedback.html">Give Feedback</a>
+                <a href="../index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Artist Profile</h2>
+        
+        <div class="profile-grid">
+            <section class="profile-section">
+                <h3>Personal Information</h3>
+                <p><strong>Name:</strong> <span id="artist-name">Shakshi shah</span></p>
+                <p><strong>Email:</strong> <span id="artist-email">shakshi@example.com</span></p>
+                <p><strong>Category:</strong> <span id="artist-category">Musician</span></p>
+                <button class="btn" id="edit-profile-btn">Edit Profile</button>
+            </section>
+
+            <section class="profile-section">
+                <h3>Portfolio</h3>
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="portfolio-item">Add Photo/Video:</label>
+                        <input type="file" id="portfolio-item" name="portfolio-item" accept="image/*,video/*" required>
+                    </div>
+                    <button type="submit" class="btn">Upload</button>
+                </form>
+                
+                <div class="portfolio-items">
+                    <div class="portfolio-item">
+                        <img src="../images/account.png" alt="Portfolio item 1">
+                        <button title="Remove item">&times;</button>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="../images/account.png" alt="Portfolio item 2">
+                        <button title="Remove item">&times;</button>
+                    </div>
+                    <div class="portfolio-item">
+                        <video src="../videos/performance.mp4" controls></video>
+                        <button title="Remove item">&times;</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="profile-section">
+            <h3>Upcoming Bookings</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Customer</th>
+                            <th>Event Type</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="upcoming-bookings">
+                        <tr>
+                            <td>2023-05-25</td>
+                            <td>Jhanvi Patil</td>
+                            <td>Birthday Party</td>
+                            <td><button class="btn cancel-booking-btn">Cancel</button></td>
+                        </tr>
+                        <tr>
+                            <td>2023-06-10</td>
+                            <td>Tejal shah</td>
+                            <td>Corporate Event</td>
+                            <td><button class="btn cancel-booking-btn">Cancel</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="profile-section">
+            <h3>Reviews and Feedback</h3>
+            <div id="reviews-container">
+                <div class="review">
+                    <p><strong>Jhanvi Patil:</strong> Shakshi was amazing at our party! Highly recommended.</p>
+                    <p>Rating: 5/5</p>
+                </div>
+                <div class="review">
+                    <p><strong>Tejal Shah:</strong> Great performance, very professional.</p>
+                    <p>Rating: 4/5</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2023 Artist Hiring Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add event listeners for edit profile, upload portfolio items, and cancel bookings
+        document.getElementById('edit-profile-btn').addEventListener('click', function() {
+            alert('Edit profile functionality to be implemented');
+        });
+
+        document.getElementById('upload-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Upload functionality to be implemented');
+        });
+
+        document.querySelectorAll('.cancel-booking-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                if (confirm('Are you sure you want to cancel this booking?')) {
+                    alert('Booking cancellation functionality to be implemented');
+                }
+            });
+        });
+
+        document.querySelectorAll('.portfolio-item button').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                if (confirm('Are you sure you want to remove this item from your portfolio?')) {
+                    alert('Remove portfolio item functionality to be implemented');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

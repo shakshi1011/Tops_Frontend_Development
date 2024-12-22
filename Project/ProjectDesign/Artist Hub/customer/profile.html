@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profile - Artist Hiring Platform</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .profile-section {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1>Artist Hiring Platform</h1>
+            <nav>
+                <a href="profile.html">My Profile</a>
+                <a href="search.html">Search Artists</a>
+                <a href="manage-bookings.html">My Bookings</a>
+                <a href="feedback.html">Give Feedback</a>
+                <a href="../index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Customer Profile</h2>
+        
+        <div class="profile-grid">
+            <section class="profile-section">
+                <h3>Personal Information</h3>
+                <p><strong>Name:</strong> <span id="customer-name">Jhanvi Patil</span></p>
+                <p><strong>Email:</strong> <span id="customer-email">Jhanvi@example.com</span></p>
+                <p><strong>Phone:</strong> <span id="customer-phone">999 999 9999</span></p>
+                <button class="btn" id="edit-profile-btn">Edit Profile</button>
+            </section>
+
+            <section class="profile-section">
+                <h3>Account Summary</h3>
+                <p><strong>Total Bookings:</strong> <span id="total-bookings">5</span></p>
+                <p><strong>Upcoming Events:</strong> <span id="upcoming-events">2</span></p>
+                <p><strong>Past Events:</strong> <span id="past-events">3</span></p>
+            </section>
+        </div>
+
+        <section class="profile-section">
+            <h3>Recent Activity</h3>
+            <ul id="recent-activity">
+                <li>Booked Shakshi Shah for a Birthday Party on May 25, 2023</li>
+                <li>Left a review for Hardip Rathod's performance on April 15, 2023</li>
+                <li>Cancelled booking with Keyur Patel for June 5, 2023</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2023 Artist Hiring Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('edit-profile-btn').addEventListener('click', function() {
+            alert('Edit profile functionality to be implemented');
+        });
+    </script>
+</body>
+</html>
+
